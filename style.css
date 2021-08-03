@@ -26,7 +26,7 @@ header{
     display: none;
 }
 .toggle_nav{
-    display: block;
+    display: none;
     background-color: #ffffff;
     padding: 15px;
     border: 1px solid #9B8055;
