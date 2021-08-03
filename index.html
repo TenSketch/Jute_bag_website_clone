@@ -12,9 +12,9 @@
         <header>
             <img src="logo.png" id="logo" alt="logo">
             <div class="nav">
-                <li>Jute Bags</li>
-                <li>Gifts</li>
-                <li>About us</li>
+                <li><a href="#">Jute Bags</a></li>
+                <li><a href="#">Gifts</a></li>
+                <li><a href="#">About us</a></li>
             </div>
             <div class="vector">
                 <img id="vector-1" src="Vector-1.png" alt="contact">
@@ -22,11 +22,20 @@
                 <img id="vector-3" src="Vector-3.png" alt="cart">
             </div>
             <div class="bar">
-                <span id="bar-1"></span>
-                <span id="bar-2"></span>
-                <span id="bar-3"></span>
+                <a href="javascript:void(0)" class="bar">
+                    <span id="bar-1"></span>
+                    <span id="bar-2"></span>
+                    <span id="bar-3"></span>
+                </a>
             </div>
-        </header>
+        </header><br><br><br>
+        <div class="toggle_nav">
+            <center>
+                <li><a href="#">Jute Bags</a></li>
+                <li><a href="#">Gifts</a></li>
+                <li><a href="#">About us</a></li>
+            </center>
+        </div>
         <main>
             <div class="rectangle">
                 <div class="caption" id="caption-1">
@@ -39,11 +48,23 @@
                 </div>
                 <div class="caption" id="caption-2">
                     <p>
-                        Buy a jute bag and avoid plastic
-                    </p>
+                        Buy a jute bag and avoid plastic                </p>
                 </div>    
             </div>
         </main>
     </div>
+    <script>
+        const a = document.querySelector('.bar');
+        const b = document.querySelector('.toggle_nav');
+
+        a.addEventListener('click', ()=>{
+            if(b.style.display == 'none'){
+                b.style.display = 'block';
+            } 
+            else{
+                b.style.display = 'none';
+            }
+        });
+    </script>
 </body>
 </html>
