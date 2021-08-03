@@ -1,0 +1,149 @@
+*{
+    margin: 0 auto;
+    padding: 0%;
+}
+.container{
+    position: relative;
+    width: 360px;
+    height: 640px;
+    background-color: #ffffff;
+    background-image: linear-gradient(hsla(0, 0%, 97%, .9), #9B8055);
+    /* background: url(/images/gradient-1.png); */
+}
+header{
+    position: absolute;
+    width: 314px;
+    height: 33px;
+
+    padding-top: 20px;
+    display: flex;
+}
+#logo{
+    width: 77px;
+    top: 20px;
+    margin-left: 20px;
+}
+.nav{
+    display: none;
+}
+.vector{
+padding-left: 6rem;
+}
+#vector-1{
+    padding-right:12px;
+}
+#vector-2{
+    padding-right:12px;
+}
+#vector-3{
+    padding: 0px;
+}
+.bar {
+    width: 30px;
+}
+#bar-1{
+    position: absolute;
+    width: 30px;
+    height: 0px;
+    right: -20px;
+    top: 22px;
+    border: 1px solid #9B8055;
+}
+#bar-2{
+    position: absolute;
+    width: 30px;
+    height: 0px;
+    right: -20px;
+    top: 29px;
+    border: 1px solid #9B8055;
+}
+#bar-3{
+    position: absolute;
+    width: 30px;
+    height: 0px;
+    right: -20px;
+    top: 36px;
+    border: 1px solid #9B8055;
+}
+main{
+    position: absolute;
+    width: 50%;
+    height: 60%;
+    left: 25%;
+    top: 20%;
+    padding: 0 auto;
+}
+.caption{
+    font-family: Roboto;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+}
+.bag{
+    position: absolute;
+    padding-top: 50px;
+    padding-left: 5%;
+}
+#caption-2{
+    margin-top: 300px;
+}
+@media only screen and (min-width: 600px) {
+    .container{
+        width: 100%;
+        background-image: linear-gradient(hsla(0, 0%, 99%, .9), #9B8055);
+    }
+    header{
+        position: absolute;
+        width: 90%;
+        height: 35px;
+        left: 5%;
+    }
+    .vector{
+        margin: 0%;
+        padding: 0%;
+    }
+    #logo{
+        margin-right: 0%;
+    }
+    .bar {
+        display: none;
+    }
+    .nav{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .nav li{
+        list-style: none;
+        padding: 0%;
+        margin-right: 2rem;
+        font-family: Roboto;
+        font-size: 20px;
+        line-height: 23px;
+        color: #9B8055;
+    }
+    .rectangle{
+        background: rgba( 178, 145, 108, 0.50 );
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 10.0px );
+        -webkit-backdrop-filter: blur( 10.0px );
+        border-radius: 10px;
+        animation: fadeIn 2s;
+    }
+    @keyframes fadeIn{
+        from{
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    main{
+        display: flex;
+        flex-flow: column wrap;
+    }
+    .bag{
+        justify-items: center;
+        left: 20%;
+    }
+}
