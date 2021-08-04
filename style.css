@@ -1,6 +1,8 @@
-*{
-    margin: 0 auto;
-    padding: 0%;
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
 }
 .container{
     position: relative;
@@ -10,48 +12,22 @@
     background-image: linear-gradient(hsla(0, 0%, 97%, .9), #9B8055);
     /* background: url(/images/gradient-1.png); */
 }
+/* Header part of body*/
 header{
-    position: absolute;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+
     width: 90%;
     height: 33px;
     padding-top: 20px;
-    display: flex;
 }
 #logo{
-    width: 77px;
-    top: 20px;
-    margin-left: 4%;
+    margin-left: 20px;
 }
-.nav{
-    display: none;
-}
-.toggle_nav{
-    display: none;
-    background-color: #ffffff;
-
-    border: 1px solid #9B8055;
-    position: fixed;
-    z-index: 999;
-    width: 100%;
-}
-.toggle_nav li{
-    list-style: none;
-    padding: 15px;
-}
-.toggle_nav li a{
-    text-decoration: none;
-    color: #000000;
-    font-weight: bold;
-    font-family: Roboto;
-    font-size: 20px;
-    line-height: 23px;
-}
-.toggle_nav li:hover{
-    background-image: linear-gradient(to right, hsla(0, 0%, 97%, .9), #9B8055,hsla(0, 0%, 97%, .9) );
-}
-.vector{
-    margin-left: 20%;
-    
+.icons{
+    display: flex;
+    gap: 20px;
 }
 #vector-1{
     padding-right:12px;
@@ -70,7 +46,6 @@ header{
     position: absolute;
     width: 28px;
     height: 3px;
-    right: -20px;
     background-color:#9B8055;
     border: 1.2px solid;
     border-color: hsla(0, 0%, 97%, .9);
@@ -82,28 +57,57 @@ header{
 #bar-3{
     margin-top: 12px;
 }
+/* Navigation */
+.nav{
+    display: none;
+}
+.toggle_nav{
+    display: none;
+    background-color: #ffffff;
+
+    border: 1px solid #9B8055;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+}
+.toggle_nav li{
+    list-style: none;
+    padding: 15px;
+    text-align: center;
+}
+.toggle_nav li a{
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    font-family: Roboto;
+    font-size: 20px;
+    line-height: 23px;
+    
+}
+.toggle_nav li:hover{
+    background-image: linear-gradient(to right, hsla(0, 0%, 97%, .9), #9B8055,hsla(0, 0%, 97%, .9) );
+}
+/* Main body content */
 main{
     position: absolute;
-    width: 50%;
-    height: 60%;
-    left: 25%;
-    top: 20%;
-    padding: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    gap: 7vh;
+        
+    top: 30vh;
+    width: 100vw;
+    animation: fadeIn 2s;
 }
 .caption{
     font-family: Roboto;
     font-size: 20px;
     line-height: 23px;
     text-align: center;
+    padding: 0 25px;
 }
-.rectangle{
-    /* background: rgba( 178, 145, 108, 0.50 );
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 10.0px );
-    -webkit-backdrop-filter: blur( 10.0px );
-    border-radius: 10px; */
-    animation: fadeIn 2s;
-}
+/* This area is for animation */
 @keyframes fadeIn{
     from{
         opacity: 0;
@@ -112,15 +116,8 @@ main{
         opacity: 1;
     }
 }
-.bag{
-    position: absolute;
-    left: 18%;
-    padding-top: 50px;
-}
-#caption-2{
-    margin-top: 300px;
-}
-@media only screen and (min-width: 600px) {
+/* for desktop site */
+@media only screen and (min-width: 768px) {
     .container{
         width: 100%;
         background-image: linear-gradient(hsla(0, 0%, 99%, .9), #9B8055);
@@ -130,13 +127,6 @@ main{
         width: 90%;
         height: 35px;
         left: 5%
-    }
-    .vector{
-        margin: 0%;
-        padding: 0%;
-    }
-    #logo{
-        margin-right: 0%;
     }
     .bar {
         display: none;
@@ -160,14 +150,6 @@ main{
     }
     .nav li a:hover{
         border-bottom: 2px solid #9B8055;
-    }
-
-    main{
-        display: flex;
-        flex-flow: column wrap;
-    }
-    .bag{
-        left: 18vw;
     }
     .toggle_nav, .toggle_nav li{
         display: none;
