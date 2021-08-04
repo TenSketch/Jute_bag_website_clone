@@ -28,24 +28,26 @@ header{
 .toggle_nav{
     display: none;
     background-color: #ffffff;
-    padding: 15px;
+
     border: 1px solid #9B8055;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
 }
 .toggle_nav li{
     list-style: none;
     padding: 15px;
-    
 }
 .toggle_nav li a{
     text-decoration: none;
-    color: #9B8055;
+    color: #000000;
     font-weight: bold;
     font-family: Roboto;
     font-size: 20px;
     line-height: 23px;
 }
 .toggle_nav li:hover{
-    background-color: rgba(0,0,0);
+    background-image: linear-gradient(to right, hsla(0, 0%, 97%, .9), #9B8055,hsla(0, 0%, 97%, .9) );
 }
 .vector{
     margin-left: 20%;
@@ -61,33 +63,24 @@ header{
     padding: 0px;
 }
 .bar {
-    width: 30px;
+    width: 28px;
     cursor: pointer;
-    padding: 0;
+}
+.bar_lines{
+    position: absolute;
+    width: 28px;
+    height: 3px;
+    right: -20px;
+    background-color:#9B8055;
+    border: 1.2px solid;
+    border-color: hsla(0, 0%, 97%, .9);
+    border-radius: 10px;
 }
 #bar-1{
-    position: absolute;
-    width: 30px;
-    height: 0px;
-    right: -20px;
-    top: 22px;
-    border: 1px solid #9B8055;
-}
-#bar-2{
-    position: absolute;
-    width: 30px;
-    height: 0px;
-    right: -20px;
-    top: 29px;
-    border: 1px solid #9B8055;
+    margin-top: 6px;
 }
 #bar-3{
-    position: absolute;
-    width: 30px;
-    height: 0px;
-    right: -20px;
-    top: 36px;
-    border: 1px solid #9B8055;
+    margin-top: 12px;
 }
 main{
     position: absolute;
@@ -104,7 +97,20 @@ main{
     text-align: center;
 }
 .rectangle{
-    padding: 0 auto;
+    /* background: rgba( 178, 145, 108, 0.50 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 10.0px );
+    -webkit-backdrop-filter: blur( 10.0px );
+    border-radius: 10px; */
+    animation: fadeIn 2s;
+}
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 .bag{
     position: absolute;
@@ -123,7 +129,7 @@ main{
         position: absolute;
         width: 90%;
         height: 35px;
-        left: 5%;
+        left: 5%
     }
     .vector{
         margin: 0%;
@@ -155,22 +161,7 @@ main{
     .nav li a:hover{
         border-bottom: 2px solid #9B8055;
     }
-    .rectangle{
-        /* background: rgba( 178, 145, 108, 0.50 );
-        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-        backdrop-filter: blur( 10.0px );
-        -webkit-backdrop-filter: blur( 10.0px );
-        border-radius: 10px; */
-        animation: fadeIn 2s;
-    }
-    @keyframes fadeIn{
-        from{
-            opacity: 0;
-        }
-        to {
-            opacity: 1;
-        }
-    }
+
     main{
         display: flex;
         flex-flow: column wrap;
@@ -178,7 +169,8 @@ main{
     .bag{
         left: 18vw;
     }
-    .toggle_nav{
+    .toggle_nav, .toggle_nav li{
         display: none;
+        border: none;
     }
 }
